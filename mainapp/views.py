@@ -1,5 +1,6 @@
-from django.views.generic import TemplateView
 import json
+
+from django.views.generic import TemplateView
 
 
 class MainPageView(TemplateView):
@@ -11,9 +12,9 @@ class NewsPageView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        with open('static/news.json', 'r') as file:
-            context['news'] = json.load(file)['news']
-        return context 
+        with open("static/news.json", "r") as file:
+            context["news"] = json.load(file)["news"]
+        return context
 
 
 class NewsWithPaginatorView(NewsPageView):
