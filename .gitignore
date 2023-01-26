@@ -245,3 +245,5 @@ fabric.properties
 *.vsix
 *.DS_Store
 ._*
+
+.idea/
