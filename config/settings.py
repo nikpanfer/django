@@ -112,12 +112,16 @@ LOGIN_REDIRECT_URL = "mainapp:main_page"
 LOGOUT_REDIRECT_URL = "mainapp:main_page"
 
 AUTHENTICATION_BACKENDS = (
+    "social_core.backends.vk.VKOAuth2",
     "social_core.backends.github.GithubOAuth2",
     "django.contrib.auth.backends.ModelBackend",
 )
 
 SOCIAL_AUTH_GITHUB_KEY = "09c40ef9b64e011e87c9"
 SOCIAL_AUTH_GITHUB_SECRET = "c4c3d40c4f9efaabe8580d5e3db11f7a2969d4c6"
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = "51539762"
+SOCIAL_AUTH_VK_OAUTH2_SECRET = "hHoVuQc9ZB7J8HvCIa68"
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
